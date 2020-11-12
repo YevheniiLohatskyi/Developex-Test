@@ -1,2 +1,22 @@
-package com.developex.testtask.service;public class SearchService {
+package com.developex.testtask.service;
+
+import com.developex.testtask.PageScanManager;
+import com.developex.testtask.model.SearchSession;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Data
+@Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+public class SearchService {
+
+    private final PageScanManager scanManager;
+    private SearchSession searchSession;
+
+    public void scanPages() {
+        scanManager.setSearchSession(searchSession);
+        scanManager.scanPages();
+    }
 }
