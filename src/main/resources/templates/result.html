@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+  <title>Result</title>
+  <meta content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'Start URL: ' + ${searchSession.startUrl}"></p>
+<p th:text="'Text for search: ' + ${searchSession.searchText}"></p>
+<p th:text="'Number of threads: ' + ${searchSession.threadsNumber}"></p>
+<p th:text="'Maximum number of URLs: ' + ${searchSession.maxUrls}"></p>
+
+<table id="urls">
+</table>
+
+<script>
+  $.post("/scan_pages")
+
+  setInterval(function() {
+    $( "#urls" ).load( "/url_status #urls" );
+  }, 250);
+</script>
+
+<button><a href="/">Try again</a></button>
+</body>
+</html>

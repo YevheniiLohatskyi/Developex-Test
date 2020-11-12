@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" href="/templates/css/styles.css">
+</head>
+<body>
+<table id="urls">
+  <thead>
+  <tr>
+    <th>Index</th>
+    <th>URL</th>
+    <th>Status</th>
+    <th>Error message</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="page : ${pages}">
+    <td th:text="${page.id}"></td>
+    <td th:text="${page.url}"></td>
+    <td th:text="${page.status}"></td>
+    <td th:text="${page.status} == 'error' ? ${page.errorMessage} : ''"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
