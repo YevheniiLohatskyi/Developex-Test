@@ -1,4 +1,4 @@
-package com.developex.testtask.model;
+package com.developex.testtask.scanning;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
