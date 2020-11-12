@@ -1,7 +1,7 @@
 package com.developex.testtask.controller;
 
 import com.developex.testtask.model.Page;
-import com.developex.testtask.model.SearchSession;
+import com.developex.testtask.scanning.SearchSession;
 import com.developex.testtask.service.PageService;
 import com.developex.testtask.service.SearchService;
 import java.util.List;

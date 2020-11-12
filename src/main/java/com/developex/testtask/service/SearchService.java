@@ -1,7 +1,7 @@
 package com.developex.testtask.service;
 
-import com.developex.testtask.PageScanManager;
-import com.developex.testtask.model.SearchSession;
+import com.developex.testtask.scanning.PageScanManager;
+import com.developex.testtask.scanning.SearchSession;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
