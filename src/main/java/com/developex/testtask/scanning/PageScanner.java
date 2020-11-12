@@ -20,7 +20,7 @@ public class PageScanner {
         try {
             this.htmlBody = Jsoup.connect(url).get().body();
         } catch (Exception e) {
-            throw new UrlConnectFailedException(url);
+            throw new UrlConnectFailedException();
         }
     }
 
